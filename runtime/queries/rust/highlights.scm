@@ -25,16 +25,19 @@
   (string_literal)
   (raw_string_literal)
 ] @string
-[
-  (line_comment)
-  (block_comment)
-] @comment
+
+((line_comment) @comment.documentation
+ (#match? @comment.documentation "^///"))
+((line_comment) @comment.documentation.outer
+ (#match? @comment.documentation.outer "^//!"))
+(line_comment) @comment.line
+(block_comment) @comment.block
 
 ; ---
 ; Extraneous
 ; ---
 
-(self) @variable.builtin
+(self) @variable.self
 (enum_variant (identifier) @type.enum.variant)
 
 (field_initializer
@@ -60,6 +63,24 @@
   ","
 ] @punctuation.delimiter
 
+; a corner case of using punctuation.bracket within `use` statement.
+(use_list
+  [
+    "{"
+    "}"
+  ] @punctuation.bracket.namespace)
+; a corner case of using punctuation.bracket within attributes
+(meta_arguments
+  [
+    "("
+    ")"
+  ] @punctuation.bracket.attribute)
+; a corner case of using punctuation.bracket attribute marker
+(attribute_item
+  "#" @attribute.marker)
+(inner_attribute_item
+  ["#" "!" ] @attribute.marker)
+; normal case of using punctuation.bracket
 [
   "("
   ")"
@@ -269,15 +290,25 @@
   name: (identifier) @function)
 
 ; ---
-; Macros
+; Attributes
 ; ---
+
 (meta_item
-  (identifier) @function.macro)
+  [
+    ((identifier) @attribute.name)
+    (scoped_identifier
+      name: (identifier) @attribute.name)
+  ])
+
 (attr_item
-  (identifier) @function.macro
-  (token_tree (identifier) @function.macro)?)
+    (scoped_identifier
+      name: (identifier) @attribute.name))
 
 (inner_attribute_item) @attribute
+
+; ---
+; Macros
+; ---
 
 (macro_definition
   name: (identifier) @function.macro)
@@ -287,7 +318,7 @@
     (scoped_identifier
       name: (identifier) @function.macro)
   ]
-  "!" @function.macro)
+  "!" @function.macro.marker)
 
 (metavariable) @variable.parameter
 (fragment_specifier) @type
@@ -356,7 +387,7 @@
 (scoped_use_list
   path: (identifier)? @namespace)
 (use_list
-  (identifier) @namespace)
+  (identifier) @namespace.list_items)
 (use_as_clause
   path: (identifier)? @namespace
   alias: (identifier) @namespace)
@@ -369,7 +400,7 @@
   path: (identifier)? @namespace
   name: (identifier) @namespace)
 (scoped_type_identifier
-  path: (identifier) @namespace)
+  path: (identifier) @namespace.path)
 
 
 

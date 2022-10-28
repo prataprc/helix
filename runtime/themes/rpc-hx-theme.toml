@@ -1,0 +1,207 @@
+# Author: prataprc <prataprc@gmail.com>
+
+#----- Editor theme -----------
+
+"ui.background" = { bg = "background" }
+"ui.background.separator" = { fg = "comet" }
+"ui.cursor" = { modifiers = ["reversed", "dim"] }
+"ui.cursor.select" = { bg = "delta" }
+"ui.cursor.insert" = { bg = "white" }
+"ui.cursor.match" = { fg = "#212121", bg = "#6C6999" }
+"ui.cursor.primary" = { modifiers = ["reversed"] }  
+"ui.linenr" = { fg = "comet" }
+"ui.linenr.selected" = { fg = "lilac" }
+"ui.statusline" = { fg = "lilac", bg = "darkgreen" }
+"ui.statusline.inactive" = { fg = "lilac", bg = "darkgreen", modifiers = ["dim"] }
+"ui.statusline.normal" = { fg = "lilac" }
+"ui.statusline.insert" = { fg = "red", bg = "background", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "yellow" }
+"ui.statusline.separator" = { fg = "comet" }
+"ui.popup" = { bg = "doc" }
+"ui.popup.info" = { bg = "infokeys" }
+"ui.window" = { fg = "bossanova" }
+"ui.help" = { bg = "#7958DC", fg = "yellow" }
+"ui.text" = { fg = "text" }
+"ui.text.focus" = { fg = "text_1" }
+"ui.text.info" = { fg = "lavender" }
+# "ui.virtual" = { fg = "comet" }
+# "ui.virtual.ruler" = { fg = "comet" }
+# "ui.virtual.whitespace" = { fg = "comet" }
+# "ui.virtual.indent-guide" = { fg = "comet" }
+"ui.selection" = { bg = "#540099" }
+"ui.selection.primary" = { bg = "#540099" }
+"ui.cursorline.primary" = { bg = "bossanova" }
+# "ui.cursorline.secondary"
+"ui.highlight" = { bg = "bossanova" }
+"ui.menu" = { fg = "lavender", bg = "revolver" }
+"ui.menu.selected" = { fg = "revolver", bg = "white" }
+"ui.menu.scroll" = { fg = "lavender", bg = "comet" }
+# "diagnostic"
+"diagnostic.hint" = { underline = { color = "silver", style = "curl" } }
+"diagnostic.info" = { underline = { color = "delta", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "lightning", style = "curl" } }
+"diagnostic.error" = { underline = { color = "apricot", style = "curl" } }
+"warning" = "yellow"
+"error" = "apricot"
+"info" = "delta"
+"hint" = "silver"
+
+#----- Syntax Theme -----------
+
+"attribute" = "text"
+"attribute.name" = "text"
+"attribute.marker" = "text"
+"type" = { fg = "myred_1" }
+"type.builtin" = { fg = "myred_0", modifiers = ["italic"] }
+"type.variant" = "text_3"
+"type.enum.variant" = "text_3"
+"constructor" = "text_3"
+"constant" = "text_3"
+"constant.builtin" = { fg = "text_3", modifiers = ["italic"] }
+"constant.builtin.boolean" = { fg = "text_3", modifiers = ["italic"] }
+"constant.character" = "text_3"
+"constant.character.escape" = "mycyan_0"
+"constant.numeric" = "mybrown_0"
+"constant.numeric.integer" = "mybrown_0"
+"constant.numeric.float" = "mybrown_0"
+"string" = "text_3"
+"string.regexp" = { fg = "text_3", modifiers = ["italic"] }
+"string.special" = "myred_0"
+"string.special.path" = "myred_0"
+"string.special.url" = "myred_0"
+"string.special.symbol" = "myred_0"
+"comment" = { fg = "mygray_2", modifiers = ["italic"] }
+"comment.line" = { fg = "mygray_2", modifiers = ["italic"] }
+"comment.block" = { fg = "mygray_2" }
+"comment.documentation" = { fg = "mygreen_2" }
+"comment.documentation.outer" = { fg = "mygray_0" }
+"variable" = "myyellow_0"
+"variable.self" = { fg = "mybrown_0", modifiers = ["italic"] }
+"variable.builtin" = { fg = "mybrown_0", modifiers = ["italic"] }
+"variable.parameter" = "myblue_0"
+"variable.other" = "myyellow_0"
+"variable.other.member" = "mygray_1"
+"label" = "white"
+"punctuation" = "mypunc_0"
+"punctuation.delimiter" = "text"
+"punctuation.bracket" = "myyellow_1"
+"punctuation.bracket.namespace" = { fg = "mybrown_0" }
+"punctuation.bracket.attribute" = { fg = "mypink_1" }
+"punctuation.special" = "mypunc_0"
+"keyword" = "mypink_1"
+"keyword.control" = "mypink_1"
+"keyword.control.conditional" = "mypink_1"
+"keyword.control.repeat" = "mypink_1"
+"keyword.control.import" = "mypink_1"
+"keyword.control.return" = "mypink_1"
+"keyword.control.exception" = "mypink_1"
+"keyword.operator" = { fg = "specialred", modifiers = ["italic"] }
+"keyword.directive" = "mypink_1"
+"keyword.function" = "mypink_1"
+"keyword.storage" = "mypink_1"
+"keyword.storage.type" = "mypink_1"
+"keyword.storage.modifier" = "mypink_1"
+"keyword.storage.modifier.mut" = { fg = "specialred", modifiers = ["italic"] }
+"operator" = "mycyan_1"
+"function" = "myblue_2"
+"function.builtin" = { fg = "mybrown_0", modifiers = ["italic"] }
+"function.method" = "myblue_2"
+"function.macro" = "text"
+"function.macro.marker" = "mycyan_1"
+"function.special" = "mybrown_0"
+"tag" = "white"
+"namespace" = { fg = "myyellow_1" }
+"namespace.path" = { fg = "myyellow_1" }
+"namespace.list_items" = { fg = "text" }
+"special" = { fg = "specialred", modifiers = ["italic"] }
+
+#---- Markup -----
+
+# "markup" = "lavender"
+"markup.heading" = { fg = "myred_1", modifiers = ["bold"] }
+"markup.heading.marker" = { fg = "myred_1", modifiers = ["bold"] }
+"markup.heading.1" = "myred_1"
+"markup.heading.2" = "myred_1"
+"markup.heading.3" = "myred_1"
+"markup.heading.4" = "myred_1"
+"markup.heading.5" = "myred_1"
+"markup.heading.6" = "myred_1"
+"markup.list" = "myyellow_1"
+"markup.list.unnumbered" = { fg = "myyellow_1", modifiers = ["bold"] }
+"markup.list.numbered" = { fg = "myyellow_1", modifiers = ["bold"] }
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = {  modifiers = ["italic"] }
+"markup.strikethrough" = {  modifiers = ["crossed_out"] }
+"markup.link" = "myred_1"
+"markup.link.url" = { fg = "mypink_1", modifiers = ["underlined"] }
+"markup.link.label" = { fg = "mybrown_0", modifiers = ["underlined"] }
+"markup.link.text" = "myblue_2"
+"markup.quote" = "text_2"
+"markup.raw" = "text"
+"markup.raw.inline" = "text_3"
+"markup.raw.block" = "text"
+
+#----- Diff -----
+
+"diff" = "white"
+"diff.plus" = "white"
+"diff.minus" = "white"
+"diff.delta" = "white"
+"diff.moved" = "white"
+
+#----- Editor interface ----
+
+"markup.normal" = "white"
+"markup.normal.completion" = "white"
+"markup.normal.hover" = "white"
+"markup.heading.completion" = "white"
+"markup.heading.hover" = "white"
+"markup.raw.inline.completion" = "white"
+"markup.raw.inline.hover" = "white" 
+
+[palette]
+
+# background
+
+"background" = "#191F28"
+"darkgreen" = "#17331D"
+"doc" = "#303446"
+"infokeys" = "#323317"
+
+# ui-foreground
+
+"text" = "#ABB2BF"
+"text_1" = "#D3DCED"
+"text_2" = "#5C6370" # block-quotes
+"text_3" = "#98C479" # inline-quotes
+"white" = "#DBDBDB"
+"lavender" = "#d472f5"
+"lilac" = "#dbbfef"
+"bossanova" = "#452859"
+"revolver" = "#281733"
+"silver" = "#cccccc"
+"comet" = "#5a5977"
+"lightning" = "#ffcd1c"
+"delta" = "#6F44F0"
+
+# content foreground
+
+"mygray_0" = "#D1D8EA"
+"mygray_1" = "#B4B4B4"
+"mygray_2" = "#616B7C"
+"mybrown_0" = "#C9894C"
+"mygreen_0" = "#4EC9B0"
+"mygreen_2" = "#6A9955"
+"mycyan_1" = "#57B6C2"
+"myblue_0" = "#93ABDB"
+"myblue_2" = "#61AFEF"
+"myviolet_1" = "#C43BFF"
+"myyellow_0" = "#DBD79E"
+"myyellow_1" = "#E5C17B"
+"mypink_1" = "#C679DD"
+"mycyan_0" = "#7ED2D1"
+"specialred" = "#bd5858"
+"myred_0" = "#ffa0a5"
+"myred_1" = "#B94F53"
+"apricot" = "#f47868"
+"mypunc_0" = "#96936C" 
